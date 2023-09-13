@@ -1,0 +1,217 @@
+.container {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: linear-gradient(
+      244deg,
+      var(--main-color),
+      var(--alt-color)
+   );
+}
+
+.card {
+   width: 80%;
+   height: 80%;
+   display: flex;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.photoSide {
+   width: 50%;
+}
+
+.container .photoSide .backgroundImage {
+   height: 100%;
+   background-image: url("../../public/loginphoto.jpg");
+   background-position: center;
+   background-size: cover;
+}
+
+.formSide {
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   background-color: #f5f6fa;
+}
+
+.formSide .login {
+   width: 60%;
+}
+
+.formSide .header {
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+.formSide .header h2 {
+   color: #242424;
+}
+
+.formSide .form {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.form input {
+   margin-top: 5px;
+   margin-bottom: 20px;
+   padding: 10px;
+   outline: none;
+   border: 3px solid var(--main-color);
+}
+
+.form input:focus {
+   border-color: var(--main-color);
+}
+
+.form button {
+   margin-top: 15px;
+   border: none;
+   padding: 10px;
+   font-size: 20px;
+   color: white;
+   background-color: var(--main-color);
+   cursor: pointer;
+   transition: 0.4s;
+}
+
+.form button:hover {
+   color: var(--main-color);
+   background-color: white;
+   border: 1px solid var(--main-color);
+}
+
+.login span {
+   text-align: center;
+   font-size: 20px;
+   margin-top: 20px;
+   margin-bottom: 10px;
+   color: rgb(221, 218, 218);
+   display: block;
+   position: relative;
+}
+
+.login span::after,
+.login span::before {
+   content: "";
+   position: absolute;
+   width: 38%;
+   height: 2px;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgb(221, 218, 218);
+}
+
+.login span::after {
+   right: 0;
+}
+
+.login span::before {
+   left: 0;
+}
+
+.login .googleLog {
+   background-color: var(--main-color);
+   color: white;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 10px;
+   cursor: pointer;
+}
+
+.login .googleLog img {
+   width: 20px;
+   margin-right: 5px;
+}
+
+.newAccount {
+   padding: 10px;
+   font-size: 18px;
+   text-align: center;
+   margin-top: 70px;
+}
+.newAccount a {
+   text-decoration: none;
+   margin-left: 5px;
+   color: var(--main-color) !important;
+}
+
+@media (max-width: 1050px) {
+   .formSide .header h2 {
+      font-size: 22px;
+   }
+}
+
+@media (max-width: 1050px) {
+   .formSide label,
+   .formSide button,
+   .formSide span {
+      font-size: 15px;
+   }
+   .formSide .header h2 {
+      font-size: 18px;
+   }
+   .formSide .header .logo {
+      width: 60px;
+   }
+   .newAccount a {
+      display: block;
+      margin: 10px;
+   }
+}
+
+@media (max-width: 767px) {
+   .card .photoSide {
+      display: none;
+   }
+   .card .formSide {
+      width: 100%;
+   }
+   .formSide .header h2 {
+      font-size: 22px;
+   }
+}
+
+@media (max-width: 550px) {
+   .card .formSide {
+      width: 100%;
+   }
+}
+
+@media (max-width: 500px) {
+   .formSide .header h2 {
+      font-size: 20px;
+   }
+   .formSide button,
+   .googleLog {
+      font-size: 13px;
+      padding: 15px;
+   }
+   .login {
+      min-width: 80%;
+   }
+}
+
+@media (max-width: 420px) {
+   .card {
+      width: 90%;
+   }
+}
+
+@media (max-width: 350px) {
+   .header {
+      margin-top: 20px;
+   }
+   .formSide input,
+   .formSide button,
+   .googleLog {
+      padding: 7px !important;
+   }
+   .card {
+      width: 100%;
+   }
+}

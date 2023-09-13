@@ -1,0 +1,40 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
+   text-decoration: none;
+}
+body {
+   margin: 0;
+   background-color: #ececec !important;
+}
+:root {
+   --main-color: #04c269;
+   --alt-color: #006c3a;
+}
+
+a {
+   text-decoration: none !important;
+   color: black !important;
+}
+a:hover {
+   color: black !important;
+}
+
+h1 {
+   font-size: 2em !important;
+   font-weight: bold !important;
+   margin-top: 0.67em !important;
+   margin-bottom: 0.67em !important;
+}
+input {
+   accent-color: var(--main-color);
+}
+input[type="checkbox"] {
+   color: white;
+   border-color: white;
+}
+input[type="checkbox"]:checked {
+   background-color: white;
+}

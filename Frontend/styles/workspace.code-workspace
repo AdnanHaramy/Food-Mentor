@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "graduation-project",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

@@ -1,0 +1,218 @@
+.landingAbout {
+   position: relative;
+   padding-bottom: 40px;
+   padding-top: 20px;
+   overflow: hidden;
+}
+
+.landingAbout::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   width: 30%;
+   height: 100%;
+   background-color: var(--main-color);
+   z-index: -1;
+   border-radius: 0% 1000% 0% 0%;
+}
+
+.landingAbout .effect {
+   text-transform: uppercase;
+   border: 2px solid var(--main-color);
+   padding: 10px 20px;
+   font-size: 30px;
+   width: fit-content;
+   position: relative;
+   z-index: 1;
+   left: 50%;
+   transform: translateX(-50%);
+   transition: 0.7s;
+   font-size: 20px;
+   cursor: context-menu;
+   background-color: white;
+}
+
+.landingAbout .effect::before,
+.landingAbout .effect::after {
+   content: "";
+   width: 13px;
+   height: 13px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: var(--main-color);
+   border-radius: 50%;
+   transition: 1s;
+}
+
+.landingAbout .effect::before {
+   left: -25px;
+}
+
+.landingAbout .effect::after {
+   right: -25px;
+}
+
+/* --------------------------- */
+
+.landingAbout .effect:hover {
+   color: white;
+   border-color: white;
+   transition-delay: 0.5s;
+}
+.landingAbout .effect:hover::before {
+   z-index: -1;
+   animation: left-move 0.5s linear forwards;
+}
+.landingAbout .effect:hover::after {
+   z-index: -1;
+   animation: right-move 0.5s linear forwards;
+}
+
+@keyframes left-move {
+   50% {
+      left: 0px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+   }
+   100% {
+      left: 0;
+      width: 50.5%;
+      height: 100%;
+      border-radius: 0;
+   }
+}
+@keyframes right-move {
+   50% {
+      right: 0px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+   }
+   100% {
+      right: 0;
+      width: 50%;
+      height: 100%;
+      border-radius: 0;
+   }
+}
+
+.landingAbout .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 40px 20px 0px;
+}
+
+.landingAbout .container .image .landingAboutImage {
+   width: 330px;
+   height: 330px;
+   margin-left: 100px;
+}
+
+.landingAbout .container .text {
+   width: 58%;
+   padding: 30px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   background-color: white;
+}
+
+.landingAbout .container .text h3 {
+   margin-bottom: 40px;
+   font-family: "Alkatra";
+   font-weight: bold;
+   font-size: 35px;
+}
+
+.landingAbout .container .text p {
+   color: gray;
+   /* margin-left: 90px; */
+   line-height: 2;
+}
+
+/* Media Query Responsive  */
+
+@media (max-width: 1370px) {
+   .landingAbout::before {
+      top: 20%;
+      width: 34%;
+   }
+
+   .landingAbout .container .image .landingAboutImage {
+      width: 300px;
+      height: 300px;
+      margin-left: 50px;
+   }
+}
+
+@media (max-width: 1170px) {
+   .landingAbout::before {
+      top: 28%;
+      width: 37%;
+      height: 80%;
+   }
+
+   .landingAbout .container .image .landingAboutImage {
+      width: 290px;
+      height: 290px;
+      margin-left: 0px;
+   }
+}
+
+@media (max-width: 870px) {
+   .landingAbout::before {
+      top: 35%;
+      width: 39%;
+   }
+
+   .landingAbout .container .image .landingAboutImage {
+      width: 250px;
+      height: 250px;
+   }
+
+   .landingAbout .container .text {
+      margin-top: 40px;
+   }
+}
+
+@media (max-width: 720px) {
+   .landingAbout::before {
+      top: 0%;
+      width: 0%;
+      height: 0%;
+   }
+
+   .landingAbout .container {
+      justify-content: center;
+   }
+
+   .landingAbout .container .image {
+      display: none;
+   }
+
+   .landingAbout .container .text {
+      width: 80%;
+      box-shadow: var(--main-color) 0px 3px 8px;
+   }
+}
+
+@media (max-width: 570px) {
+   .landingAbout .container .text {
+      width: 88%;
+   }
+}
+
+@media (max-width: 470px) {
+   .landingAbout .container .text {
+      width: 98%;
+   }
+
+   .landingAbout .container .text h3 {
+      font-size: 26px;
+   }
+
+   .landingAbout .container .text p {
+      font-size: 14px;
+   }
+}

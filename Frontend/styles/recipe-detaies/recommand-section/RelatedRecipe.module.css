@@ -1,0 +1,242 @@
+.container {
+   display: flex;
+   justify-content: center;
+   margin: 20px auto;
+   width: 60%;
+   position: relative;
+   box-shadow: var(--main-color) 1px 1px 6px;
+}
+
+.container .imageContainer {
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--main-color);
+   width: 55%;
+}
+
+.container .imageContainer .recipeImage {
+   width: 200px;
+   height: 200px;
+}
+.container .recipeInfo {
+   width: 80%;
+   padding: 25px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: stretch;
+}
+
+.container .recipeInfo h3 {
+   font-size: 22px;
+   font-weight: 700;
+   margin: 0;
+   line-height: 1.3;
+   font-family: "Alkatra", cursive;
+}
+
+.recipeInfo .unitsContainer {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px 0;
+}
+
+.recipeInfo .unitsContainer .reUnit {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   min-width: 65px;
+   position: relative;
+   /* border: 1px solid var(--main-color);
+    border-top: none;
+    border-bottom: none; */
+}
+
+.recipeInfo .unitsContainer .reUnit::before,
+.recipeInfo .unitsContainer .reUnit::after {
+   content: "";
+   width: 2px;
+   height: 100%;
+   background-color: var(--main-color);
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   animation: borderanimation 4s 0.5s;
+}
+
+.recipeInfo .unitsContainer .reUnit::before {
+   bottom: 0;
+   right: 0;
+}
+
+.recipeInfo .unitsContainer .reUnit::after {
+   top: 0;
+   left: 0;
+}
+
+@keyframes borderanimation {
+   0% {
+      height: 0px;
+   }
+   100% {
+      height: 100%;
+   }
+}
+
+.recipeInfo .unitsContainer .reUnit span {
+   display: block;
+   margin-top: 5px;
+   font-style: oblique;
+   color: #777;
+}
+
+.recipeInfo .reviwe {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.recipeInfo .reviwe .rating .starIcon {
+   width: 20px;
+   height: 20px;
+   margin-left: 5px;
+}
+
+.recipeInfo .viewRecipe {
+   padding: 8px;
+   width: 150px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: none;
+   color: white;
+   background-color: var(--main-color);
+   font-weight: bold;
+   border-radius: 6px;
+   transition: 0.4s;
+   text-decoration: none;
+}
+
+.recipeInfo .viewRecipe:hover {
+   color: var(--main-color);
+   background-color: white;
+   border: 1px solid var(--main-color);
+}
+
+.recipeInfo .viewRecipe .arrow {
+   display: block;
+   position: relative;
+   width: 30px;
+   height: 15px;
+   background-color: white;
+   clip-path: polygon(
+      0 40%,
+      60% 40%,
+      60% 25%,
+      90% 50%,
+      60% 75%,
+      60% 60%,
+      0 60%
+   );
+}
+
+/* Quiry REsponsive  */
+
+@media (max-width: 1300px) {
+   .container {
+      width: 75%;
+   }
+}
+
+@media (max-width: 950px) {
+   .container {
+      width: 80%;
+   }
+
+   .container .recipeInfo h3 {
+      font-size: 20px;
+   }
+
+   .recipeInfo .reviwe {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .recipeInfo .reviwe .rating {
+      margin-bottom: 10px;
+   }
+}
+@media (max-width: 850px) {
+   .container {
+      width: 85%;
+   }
+}
+
+@media (max-width: 770px) {
+   .container {
+      width: 80%;
+      flex-direction: column;
+   }
+   .container .imageContainer,
+   .container .recipeInfo {
+      width: 100%;
+   }
+   .recipeInfo .reviwe {
+      flex-direction: row;
+   }
+}
+@media (max-width: 650px) {
+   .container {
+      width: 82%;
+   }
+}
+
+@media (max-width: 600px) {
+   .container {
+      width: 85%;
+   }
+}
+
+@media (max-width: 560px) {
+   .container {
+      width: 90%;
+   }
+   .container .recipeInfo img {
+      width: 180px;
+   }
+
+   .container .recipeInfo h3 {
+      font-size: 18px;
+   }
+
+   .recipeInfo .viewRecipe {
+      justify-content: center;
+      width: fit-content;
+   }
+
+   .recipeInfo .viewRecipe span:first-child {
+      font-size: 13px;
+      padding: 0 3px;
+      font-weight: normal;
+      text-align: center;
+   }
+
+   .recipeInfo .viewRecipe .arrow {
+      width: 0;
+      height: 0;
+   }
+}
+
+@media (max-width: 450px) {
+   .container {
+      width: 100%;
+   }
+
+   .container .recipeInfo {
+      padding: 25px 15px;
+   }
+}

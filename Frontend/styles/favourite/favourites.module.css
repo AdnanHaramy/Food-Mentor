@@ -1,0 +1,264 @@
+.favoritePage {
+   display: flex;
+}
+.favoriteContainer {
+   margin-right: 50px;
+   margin-top: 40px;
+   margin-left: 50px;
+   width: calc(100% - 370px);
+}
+
+/* ------------------------------------------- */
+.favouritesBox {
+   /* max-width: 950px;
+   margin-top: -690px;
+   margin-left: 100px; */
+   margin-bottom: 20px;
+   border-radius: 20px;
+   background-color: white;
+   box-shadow: 5px 3px 3px rgb(211, 211, 211);
+   display: flex;
+   width: 80%;
+}
+
+.favouritesTextContainer {
+   flex: 1;
+   padding: 20px;
+}
+
+.favouritesImageContainer {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.favouritesBoxText1 {
+   font-size: 25px;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+.favouritesBoxText2 {
+   margin-bottom: 20px;
+}
+.favouriteButton {
+   width: fit-content;
+   display: inline-block;
+   padding: 10px;
+   background-color: #04c269;
+   color: white;
+   text-decoration: none;
+   border-radius: 4px;
+}
+.favouriteButton:hover {
+   transform: scale(1.05);
+}
+.favouritesBoxImage {
+   max-width: 100%;
+   height: auto;
+}
+
+.favouritesGrid {
+   /* margin: 0 auto; */
+   /* margin-left: 100px; */
+   /* margin-right: 320px; */
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   grid-gap: 15px;
+}
+
+/* ----------------------------------- */
+.recommendedRecipesSection {
+   width: 300px;
+   height: inherit;
+   background-color: rgb(220, 220, 220);
+   /* position: absolute;
+   right: 0px;
+   top: 0px; */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.recommendedHeader {
+   text-align: center;
+   margin-top: 30px;
+   font-size: 22px;
+   color: var(--main-color);
+}
+.recommendedRecipesContainer {
+   height: calc(100% - 15px);
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   flex: 1;
+}
+/* ----------------------------------------------- */
+.recipeContainer {
+   height: 158px;
+   width: 230px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 35px;
+   background-color: white;
+   box-shadow: 5px 3px 3px rgb(211, 211, 211);
+   border-radius: 20px;
+   position: relative;
+}
+.link {
+   color: black;
+   width: 100%;
+   flex: 1;
+   display: block;
+}
+.favouritesContainer {
+   /* margin-top: 35px; */
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+   /* padding: 18px; */
+   background-color: white;
+}
+.favouriteContainerImage {
+   position: absolute;
+   top: 0;
+   left: 20px;
+   transform: translateY(-50%);
+}
+.favouritesParagraph {
+   font-weight: 600;
+   font-size: 14px;
+   /* margin-top: 0px; */
+   /* margin-left: 15px; */
+   /* margin-right: 40px; */
+   /* position: relative; */
+   /* top: 0; */
+   padding: 15px;
+   margin-top: 27px;
+   line-height: 1.6;
+   padding-bottom: 0;
+}
+
+.favouriteContainerButton {
+   background-color: var(--main-color);
+   color: white;
+   width: 80px;
+   height: 25px;
+   border-radius: 10px;
+   border: 1px solid var(--main-color);
+   align-self: end;
+   margin: 0 20px 20px 0;
+}
+.favouriteContainerButton:hover {
+   transform: scale(1.05);
+}
+/* ------------------------------------------ */
+
+.loading {
+   margin: 100px auto;
+   text-align: center;
+   font-size: 18px;
+   color: var(--main-color);
+   position: relative;
+}
+
+.loading::before {
+   content: "";
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: transparent;
+   position: absolute;
+   left: 50%;
+   top: -70px;
+   transform: translateX(-50%);
+   border: 4px solid var(--main-color);
+   border-left-color: transparent;
+
+   animation-name: spin;
+
+   animation-duration: 1s;
+
+   animation-iteration-count: infinite;
+
+   animation-timing-function: linear;
+   animation: spin 1s linear 0 infinite;
+}
+
+@keyframes spin {
+   from {
+      transform: translateX(-50%) rotate(0deg);
+   }
+
+   to {
+      transform: translateX(-50%) rotate(360deg);
+   }
+}
+/* ----------------------------------------------------- */
+@media (max-width: 1200px) {
+   .favouritesBox {
+      width: 100%;
+   }
+}
+
+@media (max-width: 940px) {
+   .favoritePage {
+      flex-wrap: wrap;
+   }
+
+   .favoriteContainer {
+      width: calc(100% - 170px);
+   }
+   .recommendedRecipesSection {
+      width: 100%;
+      background-color: #ececec;
+      align-items: self-start;
+      margin-left: 70px;
+      padding: 50px;
+   }
+   .recommendedRecipesContainer {
+      padding: 0;
+      margin-top: 36px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+
+      grid-gap: 15px;
+   }
+}
+
+@media (max-width: 630px) {
+   .favouritesBox {
+      flex-direction: column-reverse;
+   }
+   .favouritesBoxText1 {
+      font-size: 18px;
+   }
+   .favouritesGrid {
+      place-content: center;
+   }
+}
+@media (max-width: 450px) {
+   .favoriteContainer {
+      width: calc(100% - 120px);
+      margin: 40px auto;
+   }
+   .recommendedRecipesSection {
+      padding: 16px;
+   }
+}
+
+.noFav {
+   padding: 15px;
+   margin: 20px auto;
+   /* width: 100%; */
+   line-height: 1.6;
+   font-size: 25px;
+   font-weight: bold;
+   color: var(--main-color);
+   background-color: white;
+   border-radius: 8px;
+}

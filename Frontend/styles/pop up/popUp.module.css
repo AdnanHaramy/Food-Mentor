@@ -1,0 +1,103 @@
+.popUp {
+   position: fixed;
+   background-color: white;
+   width: 50%;
+   /* height: 50%; */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 100;
+   padding: 40px;
+   border-radius: 16px;
+}
+
+.container {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+}
+
+.container .text {
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: column;
+   height: 20%;
+}
+.container .text p:first-child {
+   font-size: 32px;
+   color: var(--main-color);
+   margin-bottom: 60px;
+   font-weight: bold;
+}
+.container .text p:last-child {
+   font-size: 22px;
+   line-height: 1.7;
+   color: #7c7c7c;
+}
+
+.container .goToForm {
+   border: none;
+   padding: 10px;
+   font-size: 22px;
+   color: white !important;
+   border-radius: 6px;
+   margin: 0 25px;
+   margin-top: 15px;
+   background-color: var(--main-color);
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@media (max-width: 767px) {
+   .popUp {
+      width: 80%;
+   }
+}
+
+@media (max-width: 400px) {
+   .goToForm {
+      width: 180px;
+   }
+}
+
+/* ----------------------------------------------------------------- */
+
+.passwordErroe {
+   position: fixed;
+   background-color: white;
+   width: 50%;
+   /* height: 50%; */
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 100;
+   padding: 40px;
+   border-radius: 16px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 24px;
+}
+.passwordErroe button {
+   border: none;
+   width: fit-content;
+   padding: 10px;
+   font-size: 22px;
+   color: white !important;
+   border-radius: 6px;
+   margin: 0 25px;
+   margin-top: 25px;
+   background-color: var(--main-color);
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

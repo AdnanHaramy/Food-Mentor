@@ -1,0 +1,228 @@
+.formPage input {
+   display: block;
+   margin-bottom: 20px;
+   width: 80%;
+   padding: 10px 20px;
+   outline: none;
+   border: 3px solid #04c269;
+}
+
+.formPage input[type="radio"] {
+   display: inline;
+   width: 55px;
+}
+
+.formPage label {
+   margin-bottom: 7px;
+   font-style: italic;
+   display: inline-block;
+}
+
+.formPage select {
+   display: block;
+   width: 80%;
+   padding: 10px 20px;
+   outline: none;
+   border: 3px solid #04c269;
+}
+
+.formPage select option {
+   font-size: 18px;
+}
+
+.formPage {
+   background-color: #04c269;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.box {
+   width: 80%;
+   background-color: transparent;
+   margin: 20px 5px;
+}
+
+.box .container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+   grid-template-rows: auto auto;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   padding: 35px 50px 10px;
+
+   background-color: white;
+}
+
+.gender,
+.vegan {
+   margin-top: 20px;
+   display: flex;
+}
+
+/* ----------------------------------------------- */
+
+.fatMeasure {
+   display: flex;
+   flex-direction: column;
+   align-items: baseline;
+}
+
+.fatMeasure h4 {
+   font-size: 24px;
+   margin-bottom: 8px;
+}
+.fatMeasure input {
+   margin-bottom: 0;
+}
+
+.fatMeasure .fatDetermain {
+   margin-bottom: 10px;
+   width: 100%;
+}
+
+.fatMeasure .fatDetermain .choosingContainer {
+   width: 80%;
+   margin-top: 12px;
+}
+
+.fatMeasure .fatDetermain .choosingContainer .fatPercent {
+   display: flex;
+   align-items: center;
+   padding-bottom: 8px;
+   padding-top: 10px;
+   margin-bottom: 10px;
+   cursor: pointer;
+   background-image: linear-gradient(to left, lightblue, transparent);
+   color: #595959;
+   font-weight: bold;
+   font-size: 22px;
+   transition: 0.4s;
+}
+.fatPercent:not(:last-child) {
+   border-bottom: 1px solid #ddd;
+}
+
+.fatMeasure .fatDetermain .choosingContainer .fatPercent:hover {
+   transform: translateX(8px);
+}
+
+.choosingContainer .fatPercent img {
+   width: 24px;
+}
+
+.choosingContainer .fatPercent div {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.fatMeasure button {
+   align-self: flex-end;
+   border: none;
+   padding: 10px;
+   font-size: 20px;
+   color: white;
+   border-radius: 6px;
+   margin-top: 10px;
+   margin-right: 20%;
+   background-color: #04c269;
+   cursor: pointer;
+   transition: 0.4s;
+}
+
+.fatMeasure button:hover {
+   color: #04c269;
+   background-color: white;
+   border: 1px solid #04c269;
+}
+
+/* --------------------------------------------- */
+
+@media (max-width: 1150px) {
+   .box {
+      width: 95%;
+   }
+   .box .container {
+      grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+   }
+
+   .fatMeasure .fatDetermain input,
+   .fatMeasure .fatDetermain .choosingContainer {
+      width: 90%;
+   }
+   .fatMeasure button {
+      margin-right: 10%;
+   }
+}
+@media (max-width: 930px) {
+   .formPage {
+      height: auto;
+   }
+}
+
+@media (max-width: 906px) {
+   /* .formPage {
+      height: auto;
+   } */
+   .box {
+      width: 90%;
+   }
+   .box .container {
+      grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+   }
+   .fatMeasure {
+      margin-top: 20px;
+   }
+
+   .fatMeasure .fatDetermain input,
+   .fatMeasure .fatDetermain .choosingContainer {
+      width: 80%;
+   }
+   .fatMeasure button {
+      align-self: flex-start;
+   }
+}
+
+@media (max-width: 630px) {
+   .box .container input,
+   .box .container select,
+   .fatMeasure .fatDetermain .choosingContainer {
+      width: 90%;
+   }
+   .box .container input[type="radio"] {
+      width: 50px;
+   }
+}
+
+@media (max-width: 515px) {
+   .box .container {
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      padding: 30px;
+      padding-bottom: 10px;
+   }
+}
+
+@media (max-width: 425px) {
+   .box .container {
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      padding: 20px;
+      padding-bottom: 10px;
+   }
+}
+
+@media (max-width: 385px) {
+   .box .container {
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      padding: 20px;
+      padding-bottom: 10px;
+   }
+   .box .container input[type="radio"] {
+      width: 40px;
+   }
+   .gender,
+   .vegan {
+      display: block;
+   }
+}
